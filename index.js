@@ -18,7 +18,7 @@ const upload = multer({
   dest: crashesPath,
 }).single('upload_file_minidump');
 
-app.post('/crashreports', upload, (request, response) => {
+app.post('/vseh5Segsegeshhshsrseg/crashreports', upload, (request, response) => {
   const body = {
     ...request.body,
     filename: request.file.filename,
@@ -35,7 +35,7 @@ app.post('/crashreports', upload, (request, response) => {
   response.end();
 });
 
-app.post('/uncaughtexceptions', (request, response) => {
+app.post('/vseh5Segsegeshhshsrseg/uncaughtexceptions', (request, response) => {
   const filePath = path.join(exceptionsPath, `${uuid()}.json`);
   const report = JSON.stringify({ ...request.body, date: new Date() });
 
@@ -47,6 +47,10 @@ app.post('/uncaughtexceptions', (request, response) => {
   response.end();
 });
 
-server.listen(3000, () => {
-  console.log('Crash report server running on Port 3000.');
+app.get('/vseh5Segsegeshhshsrseg', function(req, res) {
+  res.send('hello world');
+});
+
+server.listen(6011, () => {
+  console.log('Crash report server running on Port 6011.');
 });
