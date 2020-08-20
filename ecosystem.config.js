@@ -4,7 +4,7 @@ module.exports = {
             name: "simsale-electron-reporter-server",
             script: "node",
             args: "./index.js",
-            max_memory_restart: "128MB",
+            max_memory_restart: "128M",
             instances: 1,
             exec_mode: "cluster",
             watch: false,
