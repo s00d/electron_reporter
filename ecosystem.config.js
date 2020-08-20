@@ -2,8 +2,8 @@ module.exports = {
     apps: [
         {
             name: "simsale-electron-reporter-server",
-            script: "node",
-            args: "./index.js",
+            script: "npm",
+            args: "start",
             max_memory_restart: "128M",
             instances: 1,
             exec_mode: "cluster",
